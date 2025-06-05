@@ -52,7 +52,7 @@ export const CardIcon = styled.div`
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors.warning};
   display: flex;
   align-items: center;
   justify-content: center;
