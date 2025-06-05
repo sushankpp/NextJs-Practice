@@ -1,9 +1,17 @@
-import styles from "./page.module.css";
+"use client";
+import ServicesSection from "./components/Serives";
+import { Container } from "./styles/ContainerStyle";
+import { GlobalStyle } from "./styles/GlobalStyle";
+import { theme } from "./styles/ThemeStyle";
+import { ThemeProvider } from "styled-components";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Container>
+        <ServicesSection />
+      </Container>
+    </ThemeProvider>
   );
 }
