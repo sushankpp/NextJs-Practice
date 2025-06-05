@@ -10,6 +10,7 @@ declare module "styled-components" {
       white: string;
       title: string;
       description: string;
+      warning: string;
       cardBg: string;
     };
     spacing: {
