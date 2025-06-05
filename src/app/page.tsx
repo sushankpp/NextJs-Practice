@@ -1,4 +1,5 @@
 "use client";
+import Header from "./components/Header";
 import ServicesSection from "./components/Serives";
 import { Container } from "./styles/ContainerStyle";
 import { GlobalStyle } from "./styles/GlobalStyle";
@@ -10,6 +11,7 @@ export default function Home() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Container>
+        <Header />
         <ServicesSection />
       </Container>
     </ThemeProvider>
