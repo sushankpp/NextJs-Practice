@@ -9,31 +9,31 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-  margin: ${(props) => props.theme.spacing.large} 0 0;
+  margin: ${({ theme }) => theme.spacing.large} 0 0;
 `;
 
 export const SectionTitle = styled.h2`
   font-size: 2rem;
-  color: ${(props) => props.theme.colors.white};
+  color: ${({ theme }) => theme.colors.white};
   text-align: center;
-  margin-bottom: ${(props) => props.theme.spacing.large};
+  margin-bottom: ${({ theme }) => theme.spacing.large};
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 `;
 
 export const Button = styled.button`
-  background: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.white};
+  background: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
   border: none;
-  border-radius: ${(props) => props.theme.borderRadius};
+  border-radius: ${({ theme }) => theme.borderRadius};
   padding: 12px 24px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: ${(props) => props.theme.shadows.small};
+  box-shadow: ${({ theme }) => theme.shadows.small};
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: ${(props) => props.theme.shadows.medium};
+    box-shadow: ${({ theme }) => theme.shadows.medium};
   }
 `;

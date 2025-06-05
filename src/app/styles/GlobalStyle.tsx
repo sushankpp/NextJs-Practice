@@ -1,11 +1,11 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    font-family: ${(props) => props.theme.fonts.sans};
-    background-color: ${(props) => props.theme.colors.background};
-    color: ${(props) => props.theme.colors.secondary};
+    font-family: ${({ theme: { fonts } }) => fonts.sans};
+    background-color: ${({ theme: { colors } }) => colors.background};
+        color: ${({ theme: { colors } }) => colors.secondary};
   }
 `;
