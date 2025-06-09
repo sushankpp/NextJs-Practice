@@ -3,7 +3,7 @@ import Form from "./components/ContactForm";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import ProjectsSection from "./components/Projects";
-import ServicesSection from "./components/Serives";
+import ServicesSection from "./components/Serivces";
 import Skills from "./components/Skills";
 import Stats from "./components/Stats";
 import { Container } from "./styles/ContainerStyle";

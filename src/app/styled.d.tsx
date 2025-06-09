@@ -22,7 +22,7 @@ declare module "styled-components" {
     };
     borderRadius: string;
     border: string;
-    shadows: {
+    shadows: { 
       small: string;
       medium: string;
       large: string;

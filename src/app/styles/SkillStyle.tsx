@@ -1,7 +1,4 @@
 import styled from "styled-components";
-interface CardProps {
-  $type?: "tech" | "design" | "business" | string;
-}
 
 export const Section = styled.section`
   margin: ${({ theme }) => theme.spacing.large} 0;
@@ -42,10 +39,12 @@ export const Card = styled.div`
       switch ($type) {
         case "tech":
           return theme.colors.primary;
+
         default:
           return theme.colors.secondary;
       }
-    }}
+    }};
+  }
 `;
 
 export const CardIcon = styled.div`
