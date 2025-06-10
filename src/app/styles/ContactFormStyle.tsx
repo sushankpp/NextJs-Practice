@@ -20,22 +20,30 @@ export const Label = styled.label`
   font-weight: 600;
 `;
 
-export const Input = styled.input`
+export const Input = styled.input<{ $hasError?: boolean }>`
   width: 100%;
   padding: 12px 16px;
-  border: 2px solid ${({ theme }) => theme.colors.background};
+  border: 2px solid
+    ${({ theme, $hasError }) =>
+      $hasError ? "#e74c3c" : theme.colors.background};
   border-radius: ${({ theme }) => theme.borderRadius};
-  background: ${({ theme }) => theme.colors.white};
   font-size: 1rem;
   transition: border-color 0.3s ease;
   color: ${({ theme }) => theme.colors.primary};
+
+  &:focus {
+    outline: none;
+    border-color: ${({ theme, $hasError }) =>
+      $hasError ? "#e74c3c" : theme.colors.primary};
+  }
 `;
 
-export const TextArea = styled.textarea`
+export const TextArea = styled.textarea<{ $hasError?: boolean }>`
   width: 100%;
   padding: 12px 16px;
-  border: 2px solid ${({ theme }) => theme.colors.background};
-  background: ${({ theme }) => theme.colors.white};
+  border: 2px solid
+    ${({ theme, $hasError }) =>
+      $hasError ? "#e74c3c" : theme.colors.background};
   border-radius: ${({ theme }) => theme.borderRadius};
   color: ${({ theme }) => theme.colors.primary};
   font-size: 1rem;
@@ -43,4 +51,16 @@ export const TextArea = styled.textarea`
   resize: vertical;
   font-family: ${({ theme }) => theme.fonts.sans};
   transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: ${({ theme, $hasError }) =>
+      $hasError ? "#e74c3c" : theme.colors.primary};
+  }
+`;
+
+export const ErrorMessage = styled.div`
+  color: #e74c3c;
+  font-size: 0.875rem;
+  margin-top: 4px;
 `;

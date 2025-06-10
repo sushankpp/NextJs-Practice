@@ -12,15 +12,6 @@ interface AnimatedNumberProps {
   duration?: number;
 }
 
-interface Statitem {
-  number: string;
-  label: string;
-}
-
-interface StatsProps {
-  title?: string;
-  stats?: Statitem[];
-}
 
 function AnimatedNumber({
   targetNumber,
